@@ -1,0 +1,30 @@
+{# meta
+generate: true
+#}
+
+{% extends 'twig/base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <h1>{{ config.title }}</h1>
+    <section id="intro">
+        <p>Sw:ag is an easy to use static website generator.</p>
+    </section>
+
+    <section id="structure">
+        {{ index.structure|raw }}
+    </section>
+
+    <section id="pages">
+        {{ index.pages|raw }}
+    </section>
+
+    <section id="data">
+        {{ index.data|raw }}
+    </section>
+
+    <section id="generation">
+
+    </section>
+</div>
+{% endblock %}
