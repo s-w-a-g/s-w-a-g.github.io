@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Generate your static website with Sw:ag!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+<div class="container">
+    <h1>Generate your static website with Sw:ag!</h1>
+    <section id="intro">
+        <p>Sw:ag is an easy to use static website generator.</p>
+    </section>
+
+    <section id="structure">
+        <h2>Assets organization</h2>
+
+<p>Source assets should be located in a <strong>swag</strong> directory as follows:</p>
+
+<pre><code>📁 User directory to process
+│
+├──📁 swag
+│   ├──📁 data
+│   └──📁 pages
+…
+</code></pre>
+
+    </section>
+
+    <section id="pages">
+        <h2>pages directory</h2>
+
+<div class="row">
+    <div class="col-sm-12">
+        The structure of the <code>pages</code> directory matches very closely the <code>static_website</code> organization.
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-5">
+<pre>
+📁 pages
+│
+├──❌ .hidden_file
+├──📁 blog
+│   ├──📁 post
+│   │   └──🔃 article.html.twig
+│   └──❗️index.html.twig
+├──⭕️base.html.twig
+├──⭕️header.html.twig
+├──❗️contact.html.twig
+├──❗️index.html.twig
+├──📁 style
+│   ├──📁 css
+│   │   └──❕main.css
+│   └──📁 js
+│       └──❕app.js
+…
+</pre>
+    </div>
+
+    <div class="col-sm-2 text-center">
+        <span class="processing-arrow">➡︎</span>
+    </div>
+
+    <div class="col-sm-5">
+<pre>
+📁 static_website
+│
+├──📁 blog
+│   ├──📁 post
+│   │   ├──📄 post_1.html
+│   │   ├──…
+│   │   └──📄 post_n.html
+│   └──📄 index.html
+├──📄contact.html
+├──📄index.html
+├──📁 style
+│   ├──📁 css
+│   │   └──📄main.css
+│   └──📁 js
+│       └──📄app.js
+…
+</pre>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+    <pre>
+    ❗️Twig marked for processing   🔃 Twig marked as iterative   ⭕️ Twig not marked   ❕Asset to copy   ❌ Ignored file
+    </pre>
+    </div>
+</div>
+
+    </section>
+
+    <section id="data">
+        <h2>data directory</h2>
+
+<p>Sw:ag generates a structured data based on the <code>data</code> directory tree.</p>
+
+<div class="row">
+    <div class="col-sm-5">
+The following organization
+
+<pre>
+📁 swag
+│
+├──📁 data
+│   ├──📁 posts
+│   │  ├──📄 post_1.md
+│   │  ├──…
+│   │  └──📄 post_n.md
+│   └──📄 site.yml
+…
+</pre>
+    </div>
+
+    <div class="col-sm-2 text-center">
+        <span class="processing-arrow">➡︎</span>
+    </div>
+
+    <div class="col-sm-5">
+    will generate the following data:
+<pre>
+data:
+    site:
+        url: myurl.com
+        title: My generated website
+        …
+    posts:
+        post_1:
+            author:  Jane Doe
+            date:    2016-12-01
+            content: An awesome post… chit-chat
+        …
+        post_n:
+            author:  Max Cool
+            date:    2016-06-22
+            content: Another article… chit-chat
+</pre>
+    </div>
+</div>
+
+    </section>
+
+    <section id="generation">
+
+    </section>
+</div>
+</body>
+</html>

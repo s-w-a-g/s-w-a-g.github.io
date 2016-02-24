@@ -1,0 +1,16 @@
+{# meta
+generate: true
+#}
+
+{% extends 'twig/base.html.twig' %}
+
+{% block title %}{{ pages.title }}{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>{{ pages.title }}</h1>
+    <section>
+        {{ pages }}
+    </section>
+</div>
+{% endblock %}

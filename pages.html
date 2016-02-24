@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sw:ag Pages</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+<div class="container">
+    <h1>Sw:ag Pages</h1>
+    <section>
+        <hr />
+
+<p>The <strong>swag/pages</strong> directory in the user's folder holds the files to be generated as pages of the final website.</p>
+
+<p>The Sw:ag Generator will try to process every files located in the <strong>swag/pages</strong> directory. Pages can be</p>
+
+<ul>
+<li>Templates: Twig files that are rendered and placed in the <em>destination</em> folder</li>
+<li>Assets: Files of any nature like CSS, JS that are simply copied in the _destination_folder</li>
+<li>Skipped files: Either hidden files or non marked Twig files</li>
+</ul>
+
+<h2>Twig Files</h2>
+
+<p>In order to be processed as pages for the generated website, Twig files need to start with a Sw:ag meta. The meta (which is a Twig comment) must contain the <code>generate: true</code> entry.</p>
+
+<p>example of a Sw:ag meta for Twig files</p>
+
+<pre><code class="twig">{# meta
+generate: true
+#}
+</code></pre>
+
+<h3>Standalone Twig files</h3>
+
+<p>The meta shown above is all it needs to have you page processed. The page will be rendered via the Twig engine and placed in the destination directory matching the relative path to the <code>pages</code> directory.</p>
+
+<p>If the destination directory is <code>static_website</code> and the Twig file path is <code>…/pages/team/members.html.twig</code>, the final processed file will be <code>…/static_website/team/members.html</code>.</p>
+
+<h3>Iterative Twig files</h3>
+
+<p>Think of a blog articles… What if you could just generate articles with the same Twig template and get the contents from your data? Shouldn't it be great?</p>
+
+<p>Well, Sw:ag can generate pages based on a single iterative Twig file upon info extracted from user's data.</p>
+
+<p>To be rendered as an iterative template, the Sw:ag meta in the Twig file must contain the following info:</p>
+
+<pre><code>{# meta
+generate: true      #
+type:     iterative #
+data:     posts     # path in the data variable
+item:     post      # name of the item in this Twig template
+#}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+  <th>setting</th>
+  <th>role</th>
+  <th>required</th>
+  <th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>generate</code></td>
+  <td>marks the twig template as existing page for the generated website</td>
+  <td>optional</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td><code>type</code></td>
+  <td>states it needs to generate one page per item in the "posts" array</td>
+  <td>optional</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td><code>data</code></td>
+  <td>path in the data variable. It can be deep e.g blog.fr.posts</td>
+  <td>required when type is iterative</td>
+  <td></td>
+</tr>
+<tr>
+  <td><code>item</code></td>
+  <td>name of the item in this Twig template i.e {{ post.title }}</td>
+  <td>required when type is iterative</td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<p>Currently, the generated files are placed in the destination directory relatively to the Twig file location in the <code>pages</code> directory. The name of the file is the key of the data being processed suffixed by html.</p>
+
+<h2>Assets</h2>
+
+<p>Every other files will just be copied from the <code>pages</code> directory to the destination directory. For example, <code>…/pages/css/style.css</code> will be duplicated to <code>…/static_website/css/style.css</code>.</p>
+
+<h2>Skipped files</h2>
+
+<p>Some files are skipped by default:</p>
+
+<ul>
+<li>Twig files having no meta comment</li>
+<li>hidden files i.e. files whose name starts with a dot.</li>
+</ul>
+
+    </section>
+</div>
+</body>
+</html>
