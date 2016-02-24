@@ -8,3 +8,16 @@ html, body {
     font-size: 5em;
     color: rgb(204, 204, 204);
 }
+
+table {
+    width: 100%;
+    margin: 1em 0;
+}
+
+table th {
+    border-bottom: solid gray thin;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
