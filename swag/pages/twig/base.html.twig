@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                {% include 'twig/logo.svg.twig' with {logo_id: 'header-logo'} only %}
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Getting started</a></li>
+                <li><a href="pages.html">Pages</a></li>
+                <li><a href="data.html">Data</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 {% block body %}{% endblock %}
 </body>
 </html>

@@ -2,11 +2,8 @@ html, body {
     font-size: 16px;
 }
 
-.processing-arrow {
-    display: inline-block;
-    padding-top: 1em;
-    font-size: 5em;
-    color: rgb(204, 204, 204);
+body {
+    padding-top: 80px;
 }
 
 table {
@@ -20,4 +17,27 @@ table th {
 
 tr:nth-child(even) {
     background-color: #eeeeee;
+}
+
+.navbar-nav > li > a {
+    padding-top: 1.5em;
+}
+
+.navbar-brand {
+    height: auto;
+}
+
+#header-logo {
+    height: 2em;
+}
+
+#header-logo path {
+    fill: #ee3333;
+}
+
+.processing-arrow {
+    display: inline-block;
+    padding-top: 1em;
+    font-size: 5em;
+    color: rgb(204, 204, 204);
 }
