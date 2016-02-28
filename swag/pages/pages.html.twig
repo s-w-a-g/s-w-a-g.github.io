@@ -7,10 +7,29 @@ generate: true
 {% block title %}{{ pages.title }}{% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>{{ pages.title }}</h1>
-    <section>
-        {{ pages }}
-    </section>
-</div>
+<section>
+    <div class="container">
+        <h1><span>Pages</span></h1>
+        {{ pages.structure }}
+    </div>
+</section>
+<section id="twig">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{ pages.twig}}
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        {{ pages.assets }}
+    </div>
+</section>
+<section>
+    <div class="container">
+        {{ pages.skipped }}
+    </div>
+</section>
 {% endblock %}

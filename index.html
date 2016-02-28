@@ -32,14 +32,17 @@
         </div>
     </div>
 </nav>
+<main>
+<section id="intro">
 <div class="container">
-    <h1>Generate your static website with Sw:ag!</h1>
-    <section id="intro">
-        <p>Sw:ag is an easy to use static website generator.</p>
-    </section>
+<h1>Generate your static website with Sw:ag!</h1>
+    <p>Sw:ag is an easy to use static website generator.</p>
+</div>
+</section>
 
-    <section id="structure">
-        <h2>Assets organization</h2>
+<section id="structure">
+<div class="container">
+    <h2><span>Assets organization</span></h2>
 
 <p>Source assets should be located in a <strong>swag</strong> directory as follows:</p>
 
@@ -51,15 +54,19 @@
 …
 </code></pre>
 
-    </section>
+</div>
+</section>
 
-    <section id="pages">
-        <h2>pages directory</h2>
+<section id="pages">
+<div class="container">
+    <h2><span>pages directory</span></h2>
 
 <div class="row">
     <div class="col-sm-12">
-        The structure of the <code>pages</code> directory matches very closely the <code>static_website</code> organization.
-    </div>
+
+<p>The structures of the <strong>pages</strong> and <strong>static_website</strong> directories are very similar.</p>
+
+</div>
 </div>
 
 <div class="row">
@@ -113,16 +120,18 @@
 
 <div class="row">
     <div class="col-sm-12">
-    <pre>
-    ❗️Twig marked for processing   🔃 Twig marked as iterative   ⭕️ Twig not marked   ❕Asset to copy   ❌ Ignored file
-    </pre>
+    <pre>❗️Twig marked for processing   🔃 Twig marked as iterative   ⭕️ Twig not marked   ❕Asset to copy   ❌ Ignored file</pre>
     </div>
 </div>
 
-    </section>
+<p><a href="pages.html">More about pages configuration…</a></p>
 
-    <section id="data">
-        <h2>data directory</h2>
+</div>
+</section>
+
+<section id="data">
+<div class="container">
+    <h2><span>data directory</span></h2>
 
 <p>Sw:ag generates a structured data based on the <code>data</code> directory tree.</p>
 
@@ -169,11 +178,10 @@ data:
     </div>
 </div>
 
-    </section>
+<p><a href="data.html">More about organizing data…</a></p>
 
-    <section id="generation">
-
-    </section>
 </div>
+</section>
+</main>
 </body>
 </html>

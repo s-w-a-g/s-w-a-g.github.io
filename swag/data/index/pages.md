@@ -1,8 +1,8 @@
-## pages directory
+<h2><span>pages directory</span></h2>
 
 <div class="row">
-    <div class="col-sm-12">
-        The structure of the <code>pages</code> directory matches very closely the <code>static_website</code> organization.
+    <div class="col-sm-12" markdown="1">
+The structures of the __pages__ and __static_website__ directories are very similar.
     </div>
 </div>
 
@@ -57,8 +57,8 @@
 
 <div class="row">
     <div class="col-sm-12">
-    <pre>
-    ❗️Twig marked for processing   🔃 Twig marked as iterative   ⭕️ Twig not marked   ❕Asset to copy   ❌ Ignored file
-    </pre>
+    <pre>❗️Twig marked for processing   🔃 Twig marked as iterative   ⭕️ Twig not marked   ❕Asset to copy   ❌ Ignored file</pre>
     </div>
 </div>
+
+[More about pages configuration…](pages.html)

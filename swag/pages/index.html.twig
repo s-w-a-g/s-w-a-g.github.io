@@ -5,26 +5,28 @@ generate: true
 {% extends 'twig/base.html.twig' %}
 
 {% block body %}
+<section id="intro">
 <div class="container">
-    <h1>{{ config.title }}</h1>
-    <section id="intro">
-        <p>Sw:ag is an easy to use static website generator.</p>
-    </section>
-
-    <section id="structure">
-        {{ index.structure|raw }}
-    </section>
-
-    <section id="pages">
-        {{ index.pages|raw }}
-    </section>
-
-    <section id="data">
-        {{ index.data|raw }}
-    </section>
-
-    <section id="generation">
-
-    </section>
+<h1>{{ site.title }}</h1>
+    <p>Sw:ag is an easy to use static website generator.</p>
 </div>
+</section>
+
+<section id="structure">
+<div class="container">
+    {{ index.structure|raw }}
+</div>
+</section>
+
+<section id="pages">
+<div class="container">
+    {{ index.pages|raw }}
+</div>
+</section>
+
+<section id="data">
+<div class="container">
+    {{ index.data|raw }}
+</div>
+</section>
 {% endblock %}

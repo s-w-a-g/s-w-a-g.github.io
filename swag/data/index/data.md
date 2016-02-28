@@ -1,4 +1,4 @@
-## data directory
+<h2><span>data directory</span></h2>
 
 Sw:ag generates a structured data based on the `data` directory tree.
 
@@ -44,3 +44,5 @@ data:
 </pre>
     </div>
 </div>
+
+[More about organizing data…](data.html)
