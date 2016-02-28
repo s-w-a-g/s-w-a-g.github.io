@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Sw:ag Pages</title>
+    <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/main.css">
 </head>
@@ -32,53 +32,78 @@
         </div>
     </div>
 </nav>
-<div class="container">
-    <h1>Sw:ag Pages</h1>
-    <section>
-        <hr />
+<main>
+<section>
+    <div class="container">
+        <h1><span>Pages</span></h1>
+        <p>The <strong>swag/pages</strong> directory in the user's folder holds the files to be generated as pages of the final website.</p>
 
-<p>The <strong>swag/pages</strong> directory in the user's folder holds the files to be generated as pages of the final website.</p>
-
-<p>The Sw:ag Generator will try to process every files located in the <strong>swag/pages</strong> directory. Pages can be</p>
+<p><em>Sw:ag</em> tries to process every files located in the <strong>swag/pages</strong> directory. Pages can be</p>
 
 <ul>
-<li>Templates: Twig files that are rendered and placed in the <em>destination</em> folder</li>
-<li>Assets: Files of any nature like CSS, JS that are simply copied in the _destination_folder</li>
-<li>Skipped files: Either hidden files or non marked Twig files</li>
+<li><strong>Templates</strong>: Twig files that are rendered and placed in the <strong>static_website</strong> folder.</li>
+<li><strong>Assets</strong>: Files of any nature like CSS, JS that are simply copied in the <strong>static_website</strong> folder.</li>
+<li><strong>Skipped</strong> files: Either hidden files or non marked Twig files.</li>
 </ul>
 
-<h2>Twig Files</h2>
+    </div>
+</section>
+<section id="twig">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>Twig files</span></h2>
+
+<div class="row">
+    <div class="col-md-6">
 
 <p>In order to be processed as pages for the generated website, Twig files need to start with a Sw:ag meta. The meta (which is a Twig comment) must contain the <code>generate: true</code> entry.</p>
 
-<p>example of a Sw:ag meta for Twig files</p>
+</div>
+    <div class="col-md-6">
+
+<div class="pre-caption">example of a Sw:ag meta for Twig files</div>
 
 <pre><code class="twig">{# meta
 generate: true
 #}
 </code></pre>
 
+</div>
+</div>
+
 <h3>Standalone Twig files</h3>
 
-<p>The meta shown above is all it needs to have you page processed. The page will be rendered via the Twig engine and placed in the destination directory matching the relative path to the <code>pages</code> directory.</p>
+<p>The meta shown above is all it needs to have you page processed. The page will be rendered via the Twig engine and placed in the destination directory matching the relative path to the <strong>pages</strong> directory.</p>
 
-<p>If the destination directory is <code>static_website</code> and the Twig file path is <code>…/pages/team/members.html.twig</code>, the final processed file will be <code>…/static_website/team/members.html</code>.</p>
+<p>If the Twig file path is <strong>pages/team/members.html.twig</strong>, the final processed file will be <strong>static_website/team/members.html</strong>.</p>
 
 <h3>Iterative Twig files</h3>
 
-<p>Think of a blog articles… What if you could just generate articles with the same Twig template and get the contents from your data? Shouldn't it be great?</p>
+<p><em>Sw:ag</em> can batch pages based on a single iterative Twig file upon info extracted from <a href="data.html">user's data</a>.</p>
 
-<p>Well, Sw:ag can generate pages based on a single iterative Twig file upon info extracted from user's data.</p>
+<div class="row">
+    <div class="col-sm-6">
 
-<p>To be rendered as an iterative template, the Sw:ag meta in the Twig file must contain the following info:</p>
+<p>To be rendered as an iterative template, the Twig file must be marked with a <em>Sw:ag</em> meta as follows:</p>
+
+</div>
+    <div class="col-sm-6">
+
+<div class="pre-caption">Sw:ag meta triggering an iterative Twig processing</div>
 
 <pre><code>{# meta
-generate: true      #
-type:     iterative #
-data:     posts     # path in the data variable
-item:     post      # name of the item in this Twig template
+generate: true
+type:     iterative
+data:     posts
+item:     post
 #}
 </code></pre>
+
+</div>
+</div>
+
+<div class="setting-table">
 
 <table>
 <thead>
@@ -117,22 +142,37 @@ item:     post      # name of the item in this Twig template
 </tbody>
 </table>
 
-<p>Currently, the generated files are placed in the destination directory relatively to the Twig file location in the <code>pages</code> directory. The name of the file is the key of the data being processed suffixed by html.</p>
+</div>
 
-<h2>Assets</h2>
+<p>Currently, the generated files are placed in the <strong>static_website</strong> directory relatively to the Twig file location in the <strong>pages</strong> directory. The name of the file is the key of the data being processed suffixed by html.</p>
 
-<p>Every other files will just be copied from the <code>pages</code> directory to the destination directory. For example, <code>…/pages/css/style.css</code> will be duplicated to <code>…/static_website/css/style.css</code>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2><span>Assets</span></h2>
 
-<h2>Skipped files</h2>
+<p>Every other files will just be copied from the <strong>pages</strong> directory to the destination directory.</p>
+
+<p>For example, <strong>pages/css/style.css</strong> will be duplicated to <strong>static_website/css/style.css</strong>.</p>
+
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h2><span>Skipped files</span></h2>
 
 <p>Some files are skipped by default:</p>
 
 <ul>
-<li>Twig files having no meta comment</li>
+<li>Twig files having no meta comment.</li>
 <li>hidden files i.e. files whose name starts with a dot.</li>
 </ul>
 
-    </section>
-</div>
+    </div>
+</section>
+</main>
 </body>
 </html>
