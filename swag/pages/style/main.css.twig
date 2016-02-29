@@ -8,15 +8,15 @@ html, body {
     color: {{ style.color.font }};
 }
 
-body {
-    padding-top: 80px;
-}
-
 section {
     position: relative;
     padding-top: 2em;
     padding-bottom: 2em;
     border-bottom: dotted thin #dddddd;
+}
+
+main section:first-of-type {
+    padding-top: calc(80px + 2em);
 }
 
 p {
@@ -113,4 +113,39 @@ main h3 {
     font-size: 16px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+/* footer */
+footer {
+    background: #f8f8f8;
+}
+
+footer a {
+    color: {{ style.color.font }};
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+footer .octicon-mark-github {
+    height: 1em;
+}
+
+footer .octicon-mark-github path{
+    fill: {{ style.color.font }};
+}
+
+footer a:hover .octicon-mark-github path{
+    fill: #23527c;
+}
+
+#footer-logo {
+    position: relative;
+    top: 0.1em;
+    height: 1em;
+}
+
+#footer-logo path {
+    fill: {{ style.color.font }};
 }

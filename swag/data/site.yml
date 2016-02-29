@@ -2,14 +2,5 @@
 url: "http://s-w-a-g.github.io/"
 title: "Generate your static website with Sw:ag!"
 
-style:
-  color:
-    font: "rgb(51, 51, 51)"
-    font_more:
-    font_less: ~
-    primary: "#ee3333" #Sw:ag red
-    primary_more: "#d10000"
-    primary_less: ~
-    secondary: ~
-    secondary_more: ~
-    secondary_less: ~
+github:
+  url: https://github.com/s-w-a-g/swag-generator
