@@ -1,0 +1,24 @@
+{# meta
+generate: true
+#}
+
+{% extends 'twig/base.html.twig' %}
+
+{% block title %}Organizing Data{% endblock %}
+
+{% block body %}
+<section>
+    <div class="container">
+        <h1><span>Organizing data</span></h1>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{ data.structure}}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
