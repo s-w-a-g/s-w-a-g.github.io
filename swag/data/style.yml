@@ -1,7 +1,7 @@
 ---
 
 color:
-  font: "rgb(51, 51, 51)"
+  font: "#392d2d"
   font_more: "#000000"
   font_less: ~
   primary: "#ee3333" #Sw:ag red
