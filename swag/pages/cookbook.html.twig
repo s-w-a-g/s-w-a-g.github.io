@@ -4,19 +4,19 @@ generate: true
 
 {% extends 'twig/base.html.twig' %}
 
-{% block title %}Organizing Data{% endblock %}
+{% block title %}Cook book{% endblock %}
 
 {% block body %}
 <section>
     <div class="container">
-        <h1><span>Organizing data</span></h1>
+        <h1><span>Cook book</span></h1>
     </div>
 </section>
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                {{ data.structure }}
+                {{ cookbook.server }}
             </div>
         </div>
     </div>
