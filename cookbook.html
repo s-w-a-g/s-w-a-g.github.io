@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Generating Pages</title>
+    <title>Cook book</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/main.css">
 </head>
@@ -36,142 +36,38 @@
 <main>
 <section>
     <div class="container">
-        <h1><span>Pages</span></h1>
-        <p>The <strong>swag/pages</strong> directory in the user's folder holds the files to be generated as pages of the final website.</p>
-
-<p><em>Sw:ag</em> tries to process every files located in the <strong>swag/pages</strong> directory. Pages can be</p>
-
-<ul>
-<li><strong>Templates</strong>: Twig files that are rendered and placed in the <strong>static_website</strong> folder.</li>
-<li><strong>Assets</strong>: Files of any nature like CSS, JS that are simply copied in the <strong>static_website</strong> folder.</li>
-<li><strong>Skipped</strong> files: Either hidden files or non marked Twig files.</li>
-</ul>
-
+        <h1><span>Cook book</span></h1>
     </div>
 </section>
-<section id="twig">
+<section>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2><span>Twig files</span></h2>
+                <h2><span>A quick server for your generated pages</span></h2>
+
+<p>You can quickly start a PHP web server that can serve your generated files through a http connection.</p>
+
+<p>Displaying the file directly from your file system is easier but can break links (relative and absolute). Javascript has some limitations as well.</p>
+
+<h3>Starting the webserver</h3>
+
+<p>In your terminal, being located in the folder containing both the source and default destination folder, just type the following command:</p>
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-sm-12">
 
-<p>In order to be processed as pages for the generated website, Twig files need to start with a Sw:ag meta. The meta (which is a Twig comment) must contain the <code>generate: true</code> entry.</p>
-
-</div>
-    <div class="col-md-6">
-
-<div class="pre-caption">example of a Sw:ag meta for Twig files</div>
-
-<pre><code class="twig">{# meta
-generate: true
-#}
+<pre><code class="shell">php -S localhost:8000 -t ./web
 </code></pre>
 
 </div>
 </div>
 
-<h3>Standalone Twig files</h3>
+<p>You can now reach your pages with any browser at the following address: <a href="http://localhost:8000">http://localhost:8000</a></p>
 
-<p>The meta shown above is all it needs to have you page processed. The page will be rendered via the Twig engine and placed in the destination directory matching the relative path to the <strong>pages</strong> directory.</p>
-
-<p>If the Twig file path is <strong>pages/team/members.html.twig</strong>, the final processed file will be <strong>static_website/team/members.html</strong>.</p>
-
-<h3>Iterative Twig files</h3>
-
-<p><em>Sw:ag</em> can batch pages based on a single iterative Twig file upon info extracted from <a href="data.html">user's data</a>.</p>
-
-<div class="row">
-    <div class="col-sm-6">
-
-<p>To be rendered as an iterative template, the Twig file must be marked with a <em>Sw:ag</em> meta as follows:</p>
-
-</div>
-    <div class="col-sm-6">
-
-<div class="pre-caption">Sw:ag meta triggering an iterative Twig processing</div>
-
-<pre><code>{# meta
-generate: true
-type:     iterative
-data:     posts
-item:     post
-#}
-</code></pre>
-
-</div>
-</div>
-
-<div class="setting-table">
-
-<table>
-<thead>
-<tr>
-  <th>setting</th>
-  <th>role</th>
-  <th>required</th>
-  <th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>generate</code></td>
-  <td>marks the twig template as existing page for the generated website</td>
-  <td>optional</td>
-  <td>false</td>
-</tr>
-<tr>
-  <td><code>type</code></td>
-  <td>states it needs to generate one page per item in the "posts" array</td>
-  <td>optional</td>
-  <td>false</td>
-</tr>
-<tr>
-  <td><code>data</code></td>
-  <td>path in the data variable. It can be deep e.g blog.fr.posts</td>
-  <td>required when type is iterative</td>
-  <td></td>
-</tr>
-<tr>
-  <td><code>item</code></td>
-  <td>name of the item in this Twig template i.e {{ post.title }}</td>
-  <td>required when type is iterative</td>
-  <td></td>
-</tr>
-</tbody>
-</table>
-
-</div>
-
-<p>Currently, the generated files are placed in the <strong>static_website</strong> directory relatively to the Twig file location in the <strong>pages</strong> directory. The name of the file is the key of the data being processed suffixed by html.</p>
+<p>More about <a href="http://php.net/manual/fr/features.commandline.webserver.php">configuring a PHP webserver</a>!</p>
 
             </div>
         </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        <h2><span>Assets</span></h2>
-
-<p>Every other files will just be copied from the <strong>pages</strong> directory to the destination directory.</p>
-
-<p>For example, <strong>pages/css/style.css</strong> will be duplicated to <strong>static_website/css/style.css</strong>.</p>
-
-    </div>
-</section>
-<section>
-    <div class="container">
-        <h2><span>Skipped files</span></h2>
-
-<p>Some files are skipped by default:</p>
-
-<ul>
-<li>Twig files having no meta comment.</li>
-<li>hidden files i.e. files whose name starts with a dot.</li>
-</ul>
-
     </div>
 </section>
 </main>
