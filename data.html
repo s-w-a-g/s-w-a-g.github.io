@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Organizing Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1721.9087 602.06435"
+  id="header-logo">
+  <g color="#000" fill="#666667">
+    <path style="isolation:auto;mix-blend-mode:normal" d="M115.52 128.63c-12.58 33.23 33.26 64.14 56.48 74.6 75.42 33.97 142.83 46.26 204.2 103.6 84.64 79.05 57.68 209.72-24.82 258.6-83.36 49.38-274.03 57.34-322.27-29.7-31.3-56.53-14.8-162.43 71.6-145.58 25.4 4.95 34.4 39.57 31.7 63.86-2.7 24.3 17.8 60.6 44 67.8 53.7 14.7 124.2-7.9 139.3-63.2C343.3 357.7 167.2 309.7 84.6 263c-67.9-38.4-96.2-100-80-152.54 23.8-77.33 107.7-99.8 167-93.07 46.62 1.9 111.2 25.9 135.1 66.3 20 22.4 0 59-20.86 71.3-25.34 15.6-67.6 26-90.82 3.2-22.6-22.2-71.7-49.9-79.4-29.5zm1277.18 92.55c-7.54 137.45 176.9 206.18 243.43 106.9-14.24 109.52-18.7 143.23-82.82 180.3-60.2 29.1-96.2-10.3-144.6-46.57-21-15.7-64.2-23.4-82 7.5-17.8 31 1.5 65.2 19.1 79.8 43.4 36 98 46.7 171.3 46.6 105.4-.1 180.6-75.3 194.9-215.4C1731.1 191.8 1725.1.4 1672.8 0c-60.62-.43-62.27 28.9-63.28 29.93-153.44-44.1-209.57 58.6-216.83 191.25zm231.08-121.8c9.38 112.5-4.97 156.57-45.26 173.2-43.83 18.07-86.44 5.57-86-54.33 2.92-102.94 30-143.7 131.26-118.88z" overflow="visible" solid-color="#000000"/>
+    <path style="isolation:auto;mix-blend-mode:normal" d="M754.4 173.08c-23.26 35-11.7 61.26-1.47 75.53 57.94 80.8 3.68 207.5-36.88 156 23.05-68.6-1.6-115.6-57.8-113.2-81.24 3.5-74.9 65-49.34 141.2-21.6 43.1-60.7 73.4-89.8 4.9-20.8-79.9 5-143 58.9-204.2 35.1-38.62-14.1-50.22-22.4-53.54-24.1-9.67-65.6-2.6-88.4 24.5-40 47.58-45.7 107.88-50.8 153.18-7.5 86.3 38.3 218.9 139 193.6 33.2-6.8 73.3-18.4 104.1-51.44 27.4 17.46 62.8 25.66 96.4 12.2 129.8-52.04 126.6-227.57 85.8-341.15-16.6-46.37-65.7-26.43-87.1 2.63zM1244 86.6c-132.42-22.56-203.82 54.13-214.87 178.34-10.02 112.7 17.8 216 148.07 185.8 43.4-10.08 76-30.17 101.02-60.9 28.08 25.06 98.78 25.3 145.73 2.05 62.98-31.2 75.06-56.8 58.65-94.6-110 56.6-137.24 18.7-153.9-19.4 8.45-62.7 45.14-194.1 16.86-209.9-28.3-11.3-86.6-4.8-101.55 18.5zm-18.46 70.82c.25 37.25 4.86 117.34 11.54 153.97-39.42 64.5-124.34 75.9-104.9-34.9 8.66-51.2 25.62-116.4 93.36-119.1zm-345.6 63.6c-6.92-26.62 24.3-57.3 50.65-65.16 24.3-7.25 60.5 2.12 72 24.78 12.9 25.42 17.6 63.7-25.4 81.65-43.1 17.9-88.5-7.2-97.3-41.3z" overflow="visible" solid-color="#000000"/>
+    <path style="isolation:auto;mix-blend-mode:normal" d="M921.4 349.54c21.94-1.68 48.32-.37 63.2 15.94 38.5 42.26 11.4 90.23-47.86 89.2-15.6-.28-44.56-9.02-52.62-23.23-21.94-38.7 3.43-79.3 37.27-81.9z" overflow="visible" solid-color="#000000"/>
+  </g>
+</svg>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Getting started</a></li>
+                <li><a href="/pages.html">Pages</a></li>
+                <li><a href="/data.html">Data</a></li>
+                <li><a href="/cookbook.html">Cookbook</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+<section>
+    <div class="container">
+        <h1><span>Organizing data</span></h1>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>the data tree</span></h2>
+
+<p>Every files located in the <strong>swag/data</strong> directory will be processed. Each file will be added to the data tree. The name of the file just defines the key and its content becomes the value. Directories are treated in the same way except that the generated value is a subtree of key/value, and so on and on…</p>
+
+<p>Eventually, the whole data set is injected in each handled Twig file during the pages generation.</p>
+
+<h3>Example</h3>
+
+<div class="row">
+    <div class="col-sm-6">
+        <p>The following yml file</p>
+    </div>
+
+    <div class="col-sm-6">
+
+<div class="pre-caption">data.site.yml</div>
+
+<pre><code class="yml">---
+url:     mywebsite.com
+title:   My Awesome Website
+charset: utf-8
+</code></pre>
+
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+
+<p>will generate the final <code>$data</code> variable.</p>
+
+</div>
+
+    <div class="col-sm-6">
+
+<div class="pre-caption">generated $data</div>
+
+<pre><code class="php">$data = [
+    'site' =&gt; [
+        'url'     =&gt; 'mywebsite.com',
+        'title'   =&gt; 'My Awesome Website',
+        'charset' =&gt; 'utf-8'
+    ]
+];
+</code></pre>
+
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+
+<p>Eventually, the data is accessible in the Twig templates.</p>
+
+</div>
+
+    <div class="col-sm-6">
+
+<div class="pre-caption">Usecase in a Twig template</div>
+
+<pre><code class="Twig">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="{{ site.charset }}"&gt;
+    &lt;title&gt;{{ site.title }}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {% block body %}{% endblock %}
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</div>
+</div>
+
+<h3>Yml files</h3>
+
+<p>Yml is the more human friendly file format to store values. Its comprehensive syntax makes it easy to read but also to write.</p>
+
+<h3>Markdown files</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is a lightweight markup language […] designed so that it can be converted to HTML. It allows to write HTML-ish files in a more readable (and human) way.</p>
+
+<p><em>Sw:ag</em> handles Markdown files in a singular way compared to other data files. They can contain a meta data section delimited by triple dashes. Meta data will be extracted from the file and added to the <code>$data</code> tree. Like any other data files, the name of the file sets the key name. The value is a special data store containing meta in direct access as well as the content of the initial Markdown file.</p>
+
+<div class="row">
+    <div class="col-sm-6">
+
+<p>A typical blog post written in Markdown like this.</p>
+
+</div>
+
+    <div class="col-sm-6">
+
+<div class="pre-caption">2016-12-05-my-first-post.md</div>
+
+<pre><code class="markdown">---
+title:  my first blog post
+author: The invisible man
+date:   2016-12-05
+tags:
+  - web
+  - static generator
+---
+
+# My First Blog Post
+
+## Speaking out my passion
+- A great topic
+- You can't miss it
+…
+</code></pre>
+
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+
+<p>will be handled in a Twig template the following way.</p>
+
+<p>The content of the initial markdown file is simply injected in the final HTML by calling
+<code>{{ post }}</code> in the Twig template.</p>
+
+</div>
+
+    <div class="col-sm-6">
+
+<div class="pre-caption">blog/article.html.twig</div>
+
+<pre><code class="Twig">{# meta
+generate: true
+type:     iterative
+data:     posts
+item:     post
+#}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+&lt;article&gt;
+   &lt;h1&gt;{{ post.title }}&lt;/h1&gt;
+   &lt;h2&gt;
+     &lt;span class="author"&gt;{{ post.author }}&lt;/span&gt;
+     {{ post.date }}
+   &lt;/h2&gt;
+   &lt;div class="content"&gt;
+     {{ post }} # the markdown content
+   &lt;/div&gt;
+   &lt;ul&gt;
+     {% for tag in post.tags %}
+       &lt;li&gt;{{ tag }}&lt;/li&gt;
+     {% endfor %}
+   &lt;/ul&gt;
+&lt;/article&gt;
+{% endblock %}
+
+</code></pre>
+
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="https://github.com/sw-ag/swag">
+                    <svg aria-hidden="true" class="octicon octicon-mark-github" height="28" role="img" version="1.1" viewBox="0 0 16 16" width="28"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"/></svg>
+                    GitHub
+                </a>
+            </div>
+            <div class="col-sm-6 text-right">
+                Made with <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1721.9087 602.06435"
+  id="footer-logo">
+  <g color="#000" fill="#666667">
+    <path style="isolation:auto;mix-blend-mode:normal" d="M115.52 128.63c-12.58 33.23 33.26 64.14 56.48 74.6 75.42 33.97 142.83 46.26 204.2 103.6 84.64 79.05 57.68 209.72-24.82 258.6-83.36 49.38-274.03 57.34-322.27-29.7-31.3-56.53-14.8-162.43 71.6-145.58 25.4 4.95 34.4 39.57 31.7 63.86-2.7 24.3 17.8 60.6 44 67.8 53.7 14.7 124.2-7.9 139.3-63.2C343.3 357.7 167.2 309.7 84.6 263c-67.9-38.4-96.2-100-80-152.54 23.8-77.33 107.7-99.8 167-93.07 46.62 1.9 111.2 25.9 135.1 66.3 20 22.4 0 59-20.86 71.3-25.34 15.6-67.6 26-90.82 3.2-22.6-22.2-71.7-49.9-79.4-29.5zm1277.18 92.55c-7.54 137.45 176.9 206.18 243.43 106.9-14.24 109.52-18.7 143.23-82.82 180.3-60.2 29.1-96.2-10.3-144.6-46.57-21-15.7-64.2-23.4-82 7.5-17.8 31 1.5 65.2 19.1 79.8 43.4 36 98 46.7 171.3 46.6 105.4-.1 180.6-75.3 194.9-215.4C1731.1 191.8 1725.1.4 1672.8 0c-60.62-.43-62.27 28.9-63.28 29.93-153.44-44.1-209.57 58.6-216.83 191.25zm231.08-121.8c9.38 112.5-4.97 156.57-45.26 173.2-43.83 18.07-86.44 5.57-86-54.33 2.92-102.94 30-143.7 131.26-118.88z" overflow="visible" solid-color="#000000"/>
+    <path style="isolation:auto;mix-blend-mode:normal" d="M754.4 173.08c-23.26 35-11.7 61.26-1.47 75.53 57.94 80.8 3.68 207.5-36.88 156 23.05-68.6-1.6-115.6-57.8-113.2-81.24 3.5-74.9 65-49.34 141.2-21.6 43.1-60.7 73.4-89.8 4.9-20.8-79.9 5-143 58.9-204.2 35.1-38.62-14.1-50.22-22.4-53.54-24.1-9.67-65.6-2.6-88.4 24.5-40 47.58-45.7 107.88-50.8 153.18-7.5 86.3 38.3 218.9 139 193.6 33.2-6.8 73.3-18.4 104.1-51.44 27.4 17.46 62.8 25.66 96.4 12.2 129.8-52.04 126.6-227.57 85.8-341.15-16.6-46.37-65.7-26.43-87.1 2.63zM1244 86.6c-132.42-22.56-203.82 54.13-214.87 178.34-10.02 112.7 17.8 216 148.07 185.8 43.4-10.08 76-30.17 101.02-60.9 28.08 25.06 98.78 25.3 145.73 2.05 62.98-31.2 75.06-56.8 58.65-94.6-110 56.6-137.24 18.7-153.9-19.4 8.45-62.7 45.14-194.1 16.86-209.9-28.3-11.3-86.6-4.8-101.55 18.5zm-18.46 70.82c.25 37.25 4.86 117.34 11.54 153.97-39.42 64.5-124.34 75.9-104.9-34.9 8.66-51.2 25.62-116.4 93.36-119.1zm-345.6 63.6c-6.92-26.62 24.3-57.3 50.65-65.16 24.3-7.25 60.5 2.12 72 24.78 12.9 25.42 17.6 63.7-25.4 81.65-43.1 17.9-88.5-7.2-97.3-41.3z" overflow="visible" solid-color="#000000"/>
+    <path style="isolation:auto;mix-blend-mode:normal" d="M921.4 349.54c21.94-1.68 48.32-.37 63.2 15.94 38.5 42.26 11.4 90.23-47.86 89.2-15.6-.28-44.56-9.02-52.62-23.23-21.94-38.7 3.43-79.3 37.27-81.9z" overflow="visible" solid-color="#000000"/>
+  </g>
+</svg>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

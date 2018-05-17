@@ -1,0 +1,171 @@
+
+html, body {
+    font-size: 20px;
+    font-weight: 300;
+    color: #392d2d;
+}
+
+section {
+    position: relative;
+    padding-top: 2em;
+    background-color: #fffbcc;
+}
+
+section::after {
+    display: block;
+    padding-bottom: 2em;
+    border-bottom: dotted thick rgb(245, 211, 144);
+    content: " ";
+    position: relative;
+    top: 2px;
+    z-index: 10;
+}
+
+main section:first-of-type {
+    padding-top: calc(80px + 2em);
+    background-color: #fffbcc;
+    background-image:
+    repeating-linear-gradient(120deg, #fffbcc, #fffbcc 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, #fffbcc, #fffbcc 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgb(255, 237, 175) 25%, transparent 25%, transparent 75%, rgb(255, 237, 175) 75%, rgb(255, 237, 175)),
+    linear-gradient(120deg, rgb(255, 237, 175) 25%, transparent 25%, transparent 75%, rgb(255, 237, 175) 75%, rgb(255, 237, 175));
+    background-size: 70px 121px;
+    background-position: center bottom;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Belgrano, Times, serif;
+}
+
+h1 {
+    letter-spacing: -0.02em;
+}
+
+table {
+    width: 100%;
+    margin: 1em 0;
+}
+
+th, td {
+    border: solid thin #ccc;
+    padding: 0.3em;
+    background-color: #f5f5f5;
+}
+
+strong {
+    font-weight: 500;
+}
+
+code {
+    color: #ee3333;
+}
+
+.row {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+main h1, main h2 {
+    color: #392d2d;
+    text-align: center;
+    margin-top: 0;
+}
+
+main h1 span, main h2 span {
+    display: inline-block;
+    box-shadow: 0px 0.3em 0px #392d2d;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.2em;
+    margin-bottom: 1em;
+}
+
+main h3 {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    border-top: solid thin #392d2d;
+    border-bottom: solid thin #392d2d;
+    line-height: 2em;
+    margin-top: 2em;
+}
+
+.navbar-nav > li > a {
+    padding-top: 1.5em;
+}
+
+.navbar-brand {
+    height: auto;
+}
+
+#header-logo {
+    height: 2em;
+}
+
+#header-logo path {
+    fill: #ee3333;
+}
+
+.processing-arrow {
+    display: inline-block;
+    padding-top: 1em;
+    font-size: 5em;
+    color: #ee3333;
+}
+
+.pre-caption {
+    font-size: 16px;
+    border-top: solid thin #ccc;
+    border-left: solid thin #ccc;
+    border-right: solid thin #ccc;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 9.5px;
+    background-color: #ffffff;
+}
+
+.pre-caption + pre {
+    font-size: 16px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* footer */
+footer {
+    background: #f8f8f8;
+}
+
+footer a {
+    color: #392d2d;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+footer .octicon-mark-github {
+    height: 1em;
+}
+
+footer .octicon-mark-github path{
+    fill: #392d2d;
+}
+
+footer a:hover .octicon-mark-github path{
+    fill: #23527c;
+}
+
+#footer-logo {
+    position: relative;
+    top: 0.1em;
+    height: 1em;
+}
+
+#footer-logo path {
+    fill: #392d2d;
+}
